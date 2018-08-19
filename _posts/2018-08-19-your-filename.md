@@ -8,7 +8,7 @@ published: false
 This blog will explain how to use an Ansible playbook to collect inventory information from some devices and publish in a table.
 
 The playbook looks like this:-
-backickts no auto
+
 
 ```
 - name: Test getting facts
