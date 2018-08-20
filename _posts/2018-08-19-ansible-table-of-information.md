@@ -38,4 +38,4 @@ and then a Jinja template is required like this:-
 
 **Note: You will need to change** {% raw %}`your_inventory_group`{% endraw %} **to a group in your inventory.**
 
-
+raw tags
