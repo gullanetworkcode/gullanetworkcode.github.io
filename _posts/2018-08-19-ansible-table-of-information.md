@@ -38,4 +38,4 @@ and then a Jinja template is required like this:-
 
 **Note: You will need to change 'your_inventory_group' to a group in your inventory.**
 
-change ```your_inventory_group``` to a bacticks
+change {% highlight %} your_inventory_group {% endhighlight %} to liquid tags
