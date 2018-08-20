@@ -38,4 +38,4 @@ and then a Jinja template is required like this:-
 
 **Note: You will need to change 'your_inventory_group' to a group in your inventory.**
 
-change {% raw %} {% highlight %} your_inventory_group {% endhighlight %} {% endraw %} to liquid tags
+change {% raw %} `your_inventory_group` {% endraw %} to raw tags
