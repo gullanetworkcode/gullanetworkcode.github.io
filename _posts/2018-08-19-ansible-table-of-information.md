@@ -26,7 +26,7 @@ The playbook looks like this:-
 
 and then a Jinja template is required like this:-
 
-```
+```jinja
 |Device |Model |IOS Version |
 |----------|-----------|-----------|
 What{% for device in groups['your_inventory_group'] %}
