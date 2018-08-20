@@ -27,11 +27,10 @@ The playbook looks like this:-
 and then a Jinja template is required like this:-
 
 ```
-|Device |Model |IOS Version |
-|----------|-----------|-----------|
-`{% for device in groups['your_inventory_group'] %}
-|{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_mo
-del']}}|{{hostvars[device]['ansible_net_version']}}|
-{% endfor %}
+	|Device |Model |IOS Version |
+	|----------|-----------|-----------|
+	{% for device in groups['your_inventory_group'] %}
+	|{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_model']}}|{{hostvars[device]['ansible_net_version']}}|
+	{% endfor %}
 ```
 escaped with backtick
