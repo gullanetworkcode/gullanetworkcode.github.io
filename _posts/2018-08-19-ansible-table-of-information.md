@@ -40,6 +40,8 @@ and then a Jinja template is required like this:-
 
 change 
 
-```your_inventory_group```
+```
+your_inventory_group
+```
 
 to multiple lines
