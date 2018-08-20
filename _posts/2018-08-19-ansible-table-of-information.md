@@ -33,4 +33,4 @@ What{% for device in groups['your_inventory_group'] %}
 |{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_model']}}|{{hostvars[device]['ansible_net_version']}}|
 {% endfor %}
 ```
-extra word
+jinja highlihting
