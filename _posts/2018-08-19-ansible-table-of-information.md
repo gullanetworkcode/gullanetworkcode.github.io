@@ -38,4 +38,6 @@ and then a Jinja template is required like this:-
 
 **Note: You will need to change 'your_inventory_group' to a group in your inventory.**
 
-change `your_inventory_group` to single backtick
+change 
+
+```your_inventory_group``` to multiple lines
