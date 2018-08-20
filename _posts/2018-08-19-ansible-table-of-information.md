@@ -10,8 +10,8 @@ The playbook looks like this:-
 
 
 ```
-- name: Test getting facts
-  hosts: poc_ios
+- name: Gather facts to create output table
+  hosts: your_inventory_group
   gather_facts: no
 
   tasks:
@@ -24,3 +24,15 @@ The playbook looks like this:-
       template: src=version_and_model.j2 dest=files/version_and_model.md
 ```
 
+and then a Jinja template is required like this:-
+
+```
+
+|Device |Model |IOS Version |
+|----------|-----------|-----------|
+{% for device in groups['your_inventory_group'] %}
+|{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_mo
+del']}}|{{hostvars[device]['ansible_net_version']}}|
+{% endfor %}
+
+```
