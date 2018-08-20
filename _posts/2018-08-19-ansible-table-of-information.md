@@ -26,11 +26,13 @@ The playbook looks like this:-
 
 and then a Jinja template is required like this:-
 
-```jinja
+{% raw %}
+```
 |Device |Model |IOS Version |
 |----------|-----------|-----------|
-What{% for device in groups['your_inventory_group'] %}
+{% for device in groups['your_inventory_group'] %}
 |{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_model']}}|{{hostvars[device]['ansible_net_version']}}|
 {% endfor %}
 ```
-jinja highlihting
+{% endraw %}
+raw tags
