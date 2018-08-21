@@ -62,7 +62,7 @@ PLAY RECAP *********************************************************************
 10.1.1.23                  : ok=2    changed=1    unreachable=0    failed=0   
 
 ```
-Then in the /files directory there will be a new markdown file that will look something like this:-
+Then in the /files directory there will be a new markdown file that will look something like this:- 
 
 |Device |Model |IOS Version |Serial Number |
 |----------|-----------|-----------|----------|
