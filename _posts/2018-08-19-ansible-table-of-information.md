@@ -40,6 +40,36 @@ and then a Jinja template is required like this:-
 
 **Note: You will need to change 'your_inventory_group' to a group in your inventory.**
 
+When the playbook is run the output will look like this (obviously with your own device names etc - the ones here are from my GNS3 test bed):-
+
+```
+
+ansible-playbook -i your_inventory_group ios_facts_table.yml --vault-id @prompt     
+Vault password (default): 
+
+PLAY [Gather facts and create table] *******************************************
+
+TASK [Get facts info from device] **********************************************
+ok: [10.1.1.23]
+ok: [10.1.1.20]
+
+TASK [Create MD file] **********************************************************
+changed: [10.1.1.20]
+changed: [10.1.1.23]
+
+PLAY RECAP *********************************************************************
+10.1.1.20                  : ok=2    changed=1    unreachable=0    failed=0   
+10.1.1.23                  : ok=2    changed=1    unreachable=0    failed=0   
+
+```
+Then in the /files directory there will be a new markdown file that will look something like this:-
+
+|Device |Model |IOS Version |Serial Number |
+|----------|-----------|-----------|----------|
+|test_iosv|IOSv|15.6(2)T|9FC4YBHUJMHEPZWZYTVPD|
+|test_iosv_23|IOSv|15.6(2)T|996M55W0XPK9F7O8S5IBP|
+
+
 
 
 
