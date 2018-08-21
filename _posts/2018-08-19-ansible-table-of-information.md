@@ -64,10 +64,12 @@ PLAY RECAP *********************************************************************
 ```
 Then in the /files directory there will be a new markdown file that will look something like this:-
 
+{% raw %}
 |Device |Model |IOS Version |Serial Number |
 |----------|-----------|-----------|----------|
 |test_iosv|IOSv|15.6(2)T|9FC4YBHUJMHEPZWZYTVPD|
 |test_iosv_23|IOSv|15.6(2)T|996M55W0XPK9F7O8S5IBP|
+{% endraw %}
 
 
 
