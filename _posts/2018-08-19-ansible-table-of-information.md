@@ -10,7 +10,9 @@ The playbook looks like this:-
 
 
 ```
-- name: Gather facts to create output table
+---
+
+- name: Gather facts and create table
   hosts: your_inventory_group
   gather_facts: no
 
@@ -21,21 +23,23 @@ The playbook looks like this:-
           - hardware
 
     - name: Create MD file
-      template: src=version_and_model.j2 dest=files/version_and_model.md
+      template: src=ios_facts_table.j2 dest=files/ios_facts_table.md
 ```
 
 and then a Jinja template is required like this:-
 
 {% raw %}
 ```
-|Device |Model |IOS Version |
-|----------|-----------|-----------|
+|Device |Model |IOS Version |Serial Number |
+|----------|-----------|-----------|----------|
 {% for device in groups['your_inventory_group'] %}
-|{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_model']}}|{{hostvars[device]['ansible_net_version']}}|
+|{{hostvars[device]['ansible_net_hostname']}}|{{hostvars[device]['ansible_net_model']}}|{{hostvars[device]['ansible_net_version']}}|{{hostvars[device]['ansible_net_serialnum']}}|
 {% endfor %}
 ```
 {% endraw %}
 
 **Note: You will need to change 'your_inventory_group' to a group in your inventory.**
+
+
 
 
