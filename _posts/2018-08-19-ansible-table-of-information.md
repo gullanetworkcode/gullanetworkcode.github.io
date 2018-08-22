@@ -6,6 +6,8 @@ published: true
 
 This blog will explain how to use an Ansible playbook to collect inventory information from some devices and publish in a table.
 
+### Quick Summary
+
 The playbook looks like this:-
 
 
@@ -69,8 +71,18 @@ Then in the /files directory there will be a new markdown file that will look so
 |test_iosv|IOSv|15.6(2)T|9FC4YBHUJMHEPZWZYTVPD|
 |test_iosv_23|IOSv|15.6(2)T|996M55W0XPK9F7O8S5IBP|
 
+### More detail
 
+The playbook uses the _iosfacts_ ansible core module but is only gathering the **hardware** subset. As it isn't mentioned in the documentation I'll list what is included in the hardware subset:-
 
+```
 
+"ansible_net_hostname": " ",
+"ansible_net_image": " ",
+"ansible_net_memfree_mb":  ,
+"ansible_net_memtotal_mb":  ,
+"ansible_net_model": " ",
+"ansible_net_serialnum": " ",
+"ansible_net_version": " "
 
-
+```
