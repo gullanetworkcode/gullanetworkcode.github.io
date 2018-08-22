@@ -86,3 +86,7 @@ The playbook uses the _iosfacts_ ansible core module but is only gathering the *
 "ansible_net_version": " "
 
 ```
+
+### Links
+
+[https://docs.ansible.com/ansible/2.5/modules/ios_facts_module.html]( "ios_facts ansible documentation")
