@@ -87,6 +87,14 @@ The playbook uses the _iosfacts_ ansible core module but is only gathering the *
 
 ```
 
+The directory for the Jinja template and the output can be modified as appropriate.
+
+The loop in the Jinja template uses the cached **hostvars** variable. If you try and use the variables for the device you end up with a table with only the entry for the last device that the _iosfacts_ was run against.
+
+Running the playbook more than once overwrites the output file
+
 ### Links
 
 [https://docs.ansible.com/ansible/2.5/modules/ios_facts_module.html]( "ios_facts ansible documentation")
+
+[https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#magic-variables-and-how-to-access-information-about-other-hosts](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#magic-variables-and-how-to-access-information-about-other-hosts "Magic Variables (Hostvars)  ansible documentation")
