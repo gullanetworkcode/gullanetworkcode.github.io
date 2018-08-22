@@ -4,7 +4,7 @@ published: true
 ## How to use Ansible to create a table of device information
 
 
-This blog will explain how to use an Ansible playbook to collect inventory information from some devices and publish in a table.
+This blog will explain how to use an Ansible playbook to collect typical inventory information from some devices and publish in a table.
 
 ### Quick Summary
 
@@ -89,7 +89,7 @@ The playbook uses the _iosfacts_ ansible core module but is only gathering the *
 
 The directory for the Jinja template and the output can be modified as appropriate.
 
-The loop in the Jinja template uses the cached **hostvars** variable. If you try and use the variables for the device you end up with a table with only the entry for the last device that the _iosfacts_ was run against.
+The loop in the Jinja template uses the cached **hostvars** variable. If you try and use the variables for the device you end up with a table with only the entry for the last device that the _iosfacts_ was run against. (Took me a while to find this out, which is why I thought I would share it)
 
 Running the playbook more than once overwrites the output file
 
