@@ -2,7 +2,7 @@
 published: true
 ---
 
-## TextFSM - Comparing 2 sets of data
+## Solving an issue with TextFSM and Comparing 2 sets of data
 
 This blog post will explain how to use TextFSM in a Python script to parse 2 seperate input files in the same script
 
