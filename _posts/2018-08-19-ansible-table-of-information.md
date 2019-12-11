@@ -1,5 +1,6 @@
 ---
 published: true
+comments: true
 ---
 ## How to use Ansible to create a table of device information
 
